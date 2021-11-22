@@ -2,3 +2,13 @@
 
 Ver [6.Minikube-y-AWS](https://github.com/ITAM-DS/analisis-numerico-computo-cientifico/wiki/6.Minikube-y-AWS) para uso de *minikube* en AWS.
 
+Algunas ejecuciones que ayudan desde la línea de comandos al envío hacia `kubeflow`
+
+```
+sudo kale --nb titanic_dataset_ml.ipynb --experiment_name default --pipeline_name titanicml --kfp_host http://<master DNS cluster kubernetes>:<port> --upload_pipeline --debug
+
+sudo kale --nb titanic_dataset_ml.ipynb --experiment_name default --pipeline_name titanicml --debug
+
+
+sudo kale --nb titanic_dataset_ml.ipynb --experiment_name default --pipeline_name titanicml --kfp_host <host>:<port> --upload_pipeline --debug
+```
